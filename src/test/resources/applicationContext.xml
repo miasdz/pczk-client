@@ -1,0 +1,62 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<beans xmlns="http://www.springframework.org/schema/beans"
+	xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:aop="http://www.springframework.org/schema/aop"
+	xmlns:tx="http://www.springframework.org/schema/tx" xmlns:jdbc="http://www.springframework.org/schema/jdbc"
+	xmlns:context="http://www.springframework.org/schema/context"
+	xsi:schemaLocation="
+     http://www.springframework.org/schema/context http://www.springframework.org/schema/context/spring-context.xsd
+     http://www.springframework.org/schema/beans http://www.springframework.org/schema/beans/spring-beans.xsd">
+	<bean id="testBean" class="itwatertop.TestBean">
+		<property name="name" value="zk{list[0]}"></property>
+	</bean>
+	
+	<bean id="SpringHello" class="itwatertop.SpringHello">
+		<property name="name" value="zk{list[0]}"></property>
+		<property name="listTest">
+			<list>
+				<list>
+					<value>zk{list[0]}</value>
+				</list>
+				<value>zk{list[1]}</value>
+			</list>
+		</property>
+		<property name="t1"><ref bean="testBean"/></property>
+		<property name="t2">
+			<bean class="itwatertop.TestBean">
+				<property name="name" value="zk{core.host}"></property>
+			</bean>
+		</property>
+		<property name="mapTest">
+			<map>
+				<entry key="zk{list[0]}" value="zk{list[1]}"></entry>
+				<entry key="list">
+					<list>
+						<value>zk{list[1]}</value>
+					</list>
+				</entry>
+				<entry key="set">
+					<set>
+						<value>zk{list[1]}</value>
+					</set>
+				</entry>
+			</map>
+		</property>
+		<property name="setTest">
+			<set>
+				<value>zk{list[0]}</value>
+				<value>zk{list[1]}</value>
+			</set>
+		</property>
+	</bean>
+	
+	<bean class="itwatertop.core.beans.factory.config.PczkPropertyPlaceholderConfiguer">
+		<property name="zkDataLoader">
+			<bean class="itwatertop.core.beans.factory.config.ZookeeperDataLoader" init-method="init">
+				<property name="address" value="192.168.38.101:2181"></property>
+				<property name="authInfo" value="guojikai:miasdz"></property>
+				<property name="system" value="pweb"></property>
+				<property name="mode" value="dev"></property>
+			</bean>
+		</property>
+	</bean>
+</beans>
