@@ -2,7 +2,7 @@
 
 Spring实现基于ZooKeeper参数中心系统客户端(pczk-client)
 
-博客地址：https://www.cnblogs.com/superstudy/p/9605955.html
+博客地址：https://www.cnblogs.com/superstudy/p/9696631.html
 
 ------
 ## 特性
