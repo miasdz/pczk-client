@@ -17,7 +17,7 @@ Spring实现基于ZooKeeper参数中心系统客户端(pczk-client)
 ## 使用步骤
 > **1.** 从github检出代码，放置到系统内，或者通过maven打包，导入项目依赖包<br/>
 > **2.** 在spring配置文件中增加`PczkPropertyPlaceholderConfiguer`配置，详见/src/test/resources/applicationContext.xml<br/>
-> **3.** pckz提供了类似于spring中`${}`的功能，配置方式为`zk{}`，配置支持三种配置方法<ul><li>字符窜 `zk{name}`</li><li>JSON对象 `zk{server.ip}`</li><li>JSON数组 `zk{list[0]}`</li></ul>其中上述配置中name，server和list均为ZooKeeper节点<br/>
+> **3.** pckz提供了类似于spring中`${}`的功能，配置方式为`zk{}`，配置支持三种配置方法<ul><li>字符窜 `zk{string}`</li><li>JSON对象 `zk{{map}.key}`</li><li>JSON数组 `zk{list[index]}`</li></ul>其中上述配置中name，server和list均为ZooKeeper节点<br/>
 > **4.** 通过上述配置方式即可实现基于ZooKeeper的参数配置中心，可参考测试案例 **/src/test/java/itwatertop/SpringHelloTest.java**
 
 ## 实时维护

@@ -6,12 +6,16 @@
 	xsi:schemaLocation="
      http://www.springframework.org/schema/context http://www.springframework.org/schema/context/spring-context.xsd
      http://www.springframework.org/schema/beans http://www.springframework.org/schema/beans/spring-beans.xsd">
+
+	<bean id="conversionService" class="org.springframework.context.support.ConversionServiceFactoryBean">
+	</bean>
+
 	<bean id="testBean" class="itwatertop.TestBean">
-		<property name="name" value="zk{list[0]}"></property>
+		<property name="name" value="zk{core.host}"></property>
 	</bean>
 	
 	<bean id="SpringHello" class="itwatertop.SpringHello">
-		<property name="name" value="zk{list[0]}"></property>
+		<property name="name" value="zk{{map}.name}"></property>
 		<property name="listTest">
 			<list>
 				<list>
@@ -46,6 +50,8 @@
 				<value>zk{list[0]}</value>
 				<value>zk{list[1]}</value>
 			</set>
+		</property>
+		<property name="testList" value="123,123,123">
 		</property>
 	</bean>
 	
