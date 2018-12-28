@@ -7,62 +7,38 @@
      http://www.springframework.org/schema/context http://www.springframework.org/schema/context/spring-context.xsd
      http://www.springframework.org/schema/beans http://www.springframework.org/schema/beans/spring-beans.xsd">
 
+	<!-- 注册默认转换器 -->
 	<bean id="conversionService" class="org.springframework.context.support.ConversionServiceFactoryBean">
 	</bean>
 
-	<bean id="testBean" class="itwatertop.TestBean">
-		<property name="name" value="zk{core.host}"></property>
-	</bean>
-	
-	<bean id="SpringHello" class="itwatertop.SpringHello">
-		<property name="name" value="zk{{map}.name}"></property>
-		<property name="listTest">
-			<list>
-				<list>
-					<value>zk{list[0]}</value>
-				</list>
-				<value>zk{list[1]}</value>
-			</list>
-		</property>
-		<property name="t1"><ref bean="testBean"/></property>
-		<property name="t2">
-			<bean class="itwatertop.TestBean">
-				<property name="name" value="zk{core.host}"></property>
-			</bean>
-		</property>
-		<property name="mapTest">
-			<map>
-				<entry key="zk{list[0]}" value="zk{list[1]}"></entry>
-				<entry key="list">
-					<list>
-						<value>zk{list[1]}</value>
-					</list>
-				</entry>
-				<entry key="set">
-					<set>
-						<value>zk{list[1]}</value>
-					</set>
-				</entry>
-			</map>
-		</property>
-		<property name="setTest">
-			<set>
-				<value>zk{list[0]}</value>
-				<value>zk{list[1]}</value>
-			</set>
-		</property>
-		<property name="testList" value="123,123,123">
-		</property>
-	</bean>
-	
+	<!-- Zookeeper参数中心配置 -->
 	<bean class="itwatertop.core.beans.factory.config.PczkPropertyPlaceholderConfiguer">
 		<property name="zkDataLoader">
 			<bean class="itwatertop.core.beans.factory.config.ZookeeperDataLoader" init-method="init">
 				<property name="address" value="192.168.38.101:2181"></property>
 				<property name="authInfo" value="guojikai:miasdz"></property>
-				<property name="system" value="pweb"></property>
-				<property name="mode" value="dev"></property>
+				<property name="system" value="testSys"></property>
+				<property name="mode" value="testMode"></property>
 			</bean>
 		</property>
 	</bean>
+	
+	<bean id="zkStringBean" class="itwatertop.core.beans.factory.config.Bean">
+		<property name="name">
+			<value>zk{stringVal}</value>
+		</property>
+	</bean>
+
+	<bean id="zkListBean" class="itwatertop.core.beans.factory.config.Bean">
+		<property name="name">
+			<value>zk{listVal[0]}</value>
+		</property>
+	</bean>
+
+	<bean id="zkMapBean" class="itwatertop.core.beans.factory.config.Bean">
+		<property name="name">
+			<value>zk{{mapVal}.val}</value>
+		</property>
+	</bean>
+
 </beans>

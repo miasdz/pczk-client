@@ -1,0 +1,64 @@
+十二月 28, 2018 2:53:29 下午 org.springframework.context.support.ClassPathXmlApplicationContext prepareRefresh
+信息: Refreshing org.springframework.context.support.ClassPathXmlApplicationContext@2d363fb3: startup date [Fri Dec 28 14:53:29 CST 2018]; root of context hierarchy
+十二月 28, 2018 2:53:29 下午 org.springframework.beans.factory.xml.XmlBeanDefinitionReader loadBeanDefinitions
+信息: Loading XML bean definitions from class path resource [applicationContext.xml]
+14:53:39.379 [main] INFO org.apache.zookeeper.ZooKeeper - Client environment:zookeeper.version=3.4.10-39d3a4f269333c922ed3db283be479f9deacaa0f, built on 03/23/2017 10:13 GMT
+14:53:39.381 [main] INFO org.apache.zookeeper.ZooKeeper - Client environment:host.name=miasdz
+14:53:39.381 [main] INFO org.apache.zookeeper.ZooKeeper - Client environment:java.version=1.8.0_181
+14:53:39.381 [main] INFO org.apache.zookeeper.ZooKeeper - Client environment:java.vendor=Oracle Corporation
+14:53:39.381 [main] INFO org.apache.zookeeper.ZooKeeper - Client environment:java.home=E:\Java\jdk1.8.0_181\jre
+14:53:39.381 [main] INFO org.apache.zookeeper.ZooKeeper - Client environment:java.class.path=E:\Java\Workspace\ParamCenter\target\test-classes;E:\Java\Workspace\ParamCenter\target\classes;E:\m2\localRepository\org\springframework\spring-core\4.3.20.RELEASE\spring-core-4.3.20.RELEASE.jar;E:\m2\localRepository\commons-logging\commons-logging\1.2\commons-logging-1.2.jar;E:\m2\localRepository\org\springframework\spring-beans\4.3.20.RELEASE\spring-beans-4.3.20.RELEASE.jar;E:\m2\localRepository\org\springframework\spring-context\4.3.20.RELEASE\spring-context-4.3.20.RELEASE.jar;E:\m2\localRepository\org\springframework\spring-aop\4.3.20.RELEASE\spring-aop-4.3.20.RELEASE.jar;E:\m2\localRepository\org\springframework\spring-expression\4.3.20.RELEASE\spring-expression-4.3.20.RELEASE.jar;E:\m2\localRepository\org\springframework\spring-context-support\4.3.20.RELEASE\spring-context-support-4.3.20.RELEASE.jar;E:\m2\localRepository\org\slf4j\slf4j-api\1.7.25\slf4j-api-1.7.25.jar;E:\m2\localRepository\ch\qos\logback\logback-classic\1.2.3\logback-classic-1.2.3.jar;E:\m2\localRepository\ch\qos\logback\logback-core\1.2.3\logback-core-1.2.3.jar;E:\m2\localRepository\org\apache\zookeeper\zookeeper\3.4.10\zookeeper-3.4.10.jar;E:\m2\localRepository\jline\jline\0.9.94\jline-0.9.94.jar;E:\m2\localRepository\io\netty\netty\3.10.5.Final\netty-3.10.5.Final.jar;E:\m2\localRepository\com\alibaba\fastjson\1.2.49\fastjson-1.2.49.jar;E:\m2\localRepository\junit\junit\4.11\junit-4.11.jar;E:\m2\localRepository\org\hamcrest\hamcrest-core\1.3\hamcrest-core-1.3.jar;E:\Java\eclipse\configuration\org.eclipse.osgi\416\0\.cp;E:\Java\eclipse\configuration\org.eclipse.osgi\415\0\.cp
+14:53:39.381 [main] INFO org.apache.zookeeper.ZooKeeper - Client environment:java.library.path=E:\Java\jdk1.8.0_181\bin;C:\WINDOWS\Sun\Java\bin;C:\WINDOWS\system32;C:\WINDOWS;E:/Java/jdk1.8.0_181/bin/../jre/bin/server;E:/Java/jdk1.8.0_181/bin/../jre/bin;E:/Java/jdk1.8.0_181/bin/../jre/lib/amd64;E:\m2\apache-maven-3.5.4\bin;C:\Program Files (x86)\Common Files\NetSarang;E:\Java\jdk1.8.0_181\bin;C:\Program Files (x86)\Intel\iCLS Client\;C:\Program Files\Intel\iCLS Client\;C:\Windows\system32;C:\Windows;C:\Windows\System32\Wbem;C:\Windows\System32\WindowsPowerShell\v1.0\;C:\Program Files (x86)\Intel\Intel(R) Management Engine Components\DAL;C:\Program Files\Intel\Intel(R) Management Engine Components\DAL;C:\Program Files (x86)\Intel\Intel(R) Management Engine Components\IPT;C:\Program Files\Intel\Intel(R) Management Engine Components\IPT;C:\Program Files (x86)\NVIDIA Corporation\PhysX\Common;E:\gradle-4.10\bin;D:\app\Git\cmd;D:\app\Git\mingw64\bin;D:\app\Git\usr\bin;D:\app\tortoisegit\bin;C:\WINDOWS\system32;C:\WINDOWS;C:\WINDOWS\System32\Wbem;C:\WINDOWS\System32\WindowsPowerShell\v1.0\;C:\WINDOWS\System32\OpenSSH\;E:\ant\apache-ant-1.9.13\bin;D:\app\HashiCorp\Vagrant\bin;G:\VirtualMachine\vagrant\.vagrant.d;C:\Users\Lenovo\AppData\Local\Microsoft\WindowsApps;D:\app\Microsoft VS Code\bin;C:\Users\Lenovo\AppData\Local\GitHubDesktop\bin;E:\Java\eclipse;;.
+14:53:39.381 [main] INFO org.apache.zookeeper.ZooKeeper - Client environment:java.io.tmpdir=C:\Users\Lenovo\AppData\Local\Temp\
+14:53:39.381 [main] INFO org.apache.zookeeper.ZooKeeper - Client environment:java.compiler=<NA>
+14:53:39.381 [main] INFO org.apache.zookeeper.ZooKeeper - Client environment:os.name=Windows 10
+14:53:39.381 [main] INFO org.apache.zookeeper.ZooKeeper - Client environment:os.arch=amd64
+14:53:39.381 [main] INFO org.apache.zookeeper.ZooKeeper - Client environment:os.version=10.0
+14:53:39.381 [main] INFO org.apache.zookeeper.ZooKeeper - Client environment:user.name=Lenovo
+14:53:39.381 [main] INFO org.apache.zookeeper.ZooKeeper - Client environment:user.home=C:\Users\Lenovo
+14:53:39.383 [main] INFO org.apache.zookeeper.ZooKeeper - Client environment:user.dir=E:\Java\Workspace\ParamCenter
+14:53:39.384 [main] INFO org.apache.zookeeper.ZooKeeper - Initiating client connection, connectString=192.168.38.101:2181 sessionTimeout=60000 watcher=itwatertop.core.beans.factory.config.ZookeeperDataLoader$1@5bb21b69
+14:53:39.386 [main] DEBUG org.apache.zookeeper.ClientCnxn - zookeeper.disableAutoWatchReset is false
+14:53:40.107 [main-SendThread(192.168.38.101:2181)] INFO org.apache.zookeeper.ClientCnxn - Opening socket connection to server 192.168.38.101/192.168.38.101:2181. Will not attempt to authenticate using SASL (unknown error)
+14:53:40.110 [main-SendThread(192.168.38.101:2181)] INFO org.apache.zookeeper.ClientCnxn - Socket connection established to 192.168.38.101/192.168.38.101:2181, initiating session
+14:53:40.111 [main-SendThread(192.168.38.101:2181)] DEBUG org.apache.zookeeper.ClientCnxn - Session establishment request sent on 192.168.38.101/192.168.38.101:2181
+14:53:40.122 [main-SendThread(192.168.38.101:2181)] INFO org.apache.zookeeper.ClientCnxn - Session establishment complete on server 192.168.38.101/192.168.38.101:2181, sessionid = 0x167ee5b9ab2001b, negotiated timeout = 40000
+14:53:40.123 [main-EventThread] INFO itwatertop.core.beans.factory.config.ZookeeperDataLoader - WatchedEvent state:SyncConnected type:None path:null
+14:53:40.127 [main-SendThread(192.168.38.101:2181)] DEBUG org.apache.zookeeper.ClientCnxn - Got auth sessionid:0x167ee5b9ab2001b
+14:53:40.128 [main-SendThread(192.168.38.101:2181)] DEBUG org.apache.zookeeper.ClientCnxn - Got auth sessionid:0x167ee5b9ab2001b
+14:53:40.133 [main-SendThread(192.168.38.101:2181)] DEBUG org.apache.zookeeper.ClientCnxn - Reading reply sessionid:0x167ee5b9ab2001b, packet:: clientPath:null serverPath:null finished:false header:: 1,4  replyHeader:: 1,691,0  request:: '/pc/testSys/testMode/stringVal,T  response:: #537472696e6756616c54657374,s{682,682,1545979228279,1545979228279,0,0,0,0,13,0,682} 
+14:53:40.134 [main] INFO itwatertop.core.beans.factory.config.PczkPropertyPlaceholderConfiguer - PlaceholderMsg [type=2, key=stringVal, subkey=null, updateSpel=@zkStringBean.name]
+14:53:40.137 [main-SendThread(192.168.38.101:2181)] DEBUG org.apache.zookeeper.ClientCnxn - Reading reply sessionid:0x167ee5b9ab2001b, packet:: clientPath:null serverPath:null finished:false header:: 2,4  replyHeader:: 2,691,0  request:: '/pc/testSys/testMode/listVal,T  response:: #5b27313233272c2027323334272c2027333435275d,s{683,683,1545979265521,1545979265521,0,0,0,0,21,0,683} 
+14:53:40.216 [main] INFO itwatertop.core.beans.factory.config.PczkPropertyPlaceholderConfiguer - PlaceholderMsg [type=1, key=listVal, subkey=0, updateSpel=@zkListBean.name]
+14:53:40.219 [main-SendThread(192.168.38.101:2181)] DEBUG org.apache.zookeeper.ClientCnxn - Reading reply sessionid:0x167ee5b9ab2001b, packet:: clientPath:null serverPath:null finished:false header:: 3,4  replyHeader:: 3,691,0  request:: '/pc/testSys/testMode/mapVal,T  response:: #7b2776616c273a276d617056277d,s{684,684,1545979298673,1545979298673,0,0,0,0,14,0,684} 
+14:53:40.220 [main] INFO itwatertop.core.beans.factory.config.PczkPropertyPlaceholderConfiguer - PlaceholderMsg [type=0, key=mapVal, subkey=val, updateSpel=@zkMapBean.name]
+null:original=null,new=StringValTest
+null:original=null,new=123
+null:original=null,new=mapV
+14:53:53.553 [main-SendThread(192.168.38.101:2181)] DEBUG org.apache.zookeeper.ClientCnxn - Got ping response for sessionid: 0x167ee5b9ab2001b after 2ms
+14:54:00.424 [main-SendThread(192.168.38.101:2181)] DEBUG org.apache.zookeeper.ClientCnxn - Got notification sessionid:0x167ee5b9ab2001b
+14:54:00.519 [main-SendThread(192.168.38.101:2181)] DEBUG org.apache.zookeeper.ClientCnxn - Got WatchedEvent state:SyncConnected type:NodeDataChanged path:/pc/testSys/testMode/stringVal for sessionid 0x167ee5b9ab2001b
+14:54:00.519 [main-EventThread] INFO itwatertop.core.beans.factory.config.ZookeeperDataLoader - WatchedEvent state:SyncConnected type:NodeDataChanged path:/pc/testSys/testMode/stringVal
+14:54:00.522 [main-SendThread(192.168.38.101:2181)] DEBUG org.apache.zookeeper.ClientCnxn - Reading reply sessionid:0x167ee5b9ab2001b, packet:: clientPath:null serverPath:null finished:false header:: 4,4  replyHeader:: 4,692,0  request:: '/pc/testSys/testMode/stringVal,T  response:: #6e6577537472696e6756616c,s{682,692,1545979228279,1545980041558,1,0,0,0,12,0,682} 
+zkStringBean:original=StringValTest,new=newStringVal
+14:54:00.563 [main-EventThread] INFO itwatertop.core.beans.factory.config.ZookeeperDataLoader - Parameter @zkStringBean.name value updates to newStringVal
+14:54:13.862 [main-SendThread(192.168.38.101:2181)] DEBUG org.apache.zookeeper.ClientCnxn - Got ping response for sessionid: 0x167ee5b9ab2001b after 8ms
+14:54:27.189 [main-SendThread(192.168.38.101:2181)] DEBUG org.apache.zookeeper.ClientCnxn - Got ping response for sessionid: 0x167ee5b9ab2001b after 2ms
+14:54:40.527 [main-SendThread(192.168.38.101:2181)] DEBUG org.apache.zookeeper.ClientCnxn - Got ping response for sessionid: 0x167ee5b9ab2001b after 6ms
+14:54:52.210 [main-SendThread(192.168.38.101:2181)] DEBUG org.apache.zookeeper.ClientCnxn - Got notification sessionid:0x167ee5b9ab2001b
+14:54:52.211 [main-SendThread(192.168.38.101:2181)] DEBUG org.apache.zookeeper.ClientCnxn - Got WatchedEvent state:SyncConnected type:NodeDataChanged path:/pc/testSys/testMode/listVal for sessionid 0x167ee5b9ab2001b
+14:54:52.211 [main-EventThread] INFO itwatertop.core.beans.factory.config.ZookeeperDataLoader - WatchedEvent state:SyncConnected type:NodeDataChanged path:/pc/testSys/testMode/listVal
+14:54:52.229 [main-SendThread(192.168.38.101:2181)] DEBUG org.apache.zookeeper.ClientCnxn - Got ping response for sessionid: 0x167ee5b9ab2001b after 18ms
+14:54:52.229 [main-SendThread(192.168.38.101:2181)] DEBUG org.apache.zookeeper.ClientCnxn - Reading reply sessionid:0x167ee5b9ab2001b, packet:: clientPath:null serverPath:null finished:false header:: 5,4  replyHeader:: 5,693,0  request:: '/pc/testSys/testMode/listVal,T  response:: #5b27373839272c27323334272c27333435275d,s{683,693,1545979265521,1545980093353,1,0,0,0,19,0,683} 
+zkListBean:original=123,new=789
+14:54:52.230 [main-EventThread] INFO itwatertop.core.beans.factory.config.ZookeeperDataLoader - Parameter @zkListBean.name value updates to 789
+14:55:05.548 [main-SendThread(192.168.38.101:2181)] DEBUG org.apache.zookeeper.ClientCnxn - Got ping response for sessionid: 0x167ee5b9ab2001b after 2ms
+14:55:18.885 [main-SendThread(192.168.38.101:2181)] DEBUG org.apache.zookeeper.ClientCnxn - Got ping response for sessionid: 0x167ee5b9ab2001b after 6ms
+14:55:32.213 [main-SendThread(192.168.38.101:2181)] DEBUG org.apache.zookeeper.ClientCnxn - Got ping response for sessionid: 0x167ee5b9ab2001b after 2ms
+14:55:42.235 [main-SendThread(192.168.38.101:2181)] DEBUG org.apache.zookeeper.ClientCnxn - Got notification sessionid:0x167ee5b9ab2001b
+14:55:42.236 [main-SendThread(192.168.38.101:2181)] DEBUG org.apache.zookeeper.ClientCnxn - Got WatchedEvent state:SyncConnected type:NodeDataChanged path:/pc/testSys/testMode/mapVal for sessionid 0x167ee5b9ab2001b
+14:55:42.236 [main-EventThread] INFO itwatertop.core.beans.factory.config.ZookeeperDataLoader - WatchedEvent state:SyncConnected type:NodeDataChanged path:/pc/testSys/testMode/mapVal
+14:55:42.247 [main-SendThread(192.168.38.101:2181)] DEBUG org.apache.zookeeper.ClientCnxn - Got ping response for sessionid: 0x167ee5b9ab2001b after 12ms
+14:55:42.249 [main-SendThread(192.168.38.101:2181)] DEBUG org.apache.zookeeper.ClientCnxn - Reading reply sessionid:0x167ee5b9ab2001b, packet:: clientPath:null serverPath:null finished:false header:: 6,4  replyHeader:: 6,694,0  request:: '/pc/testSys/testMode/mapVal,T  response:: #7b2776616c273a276e65774d617056616c277d,s{684,694,1545979298673,1545980143381,1,0,0,0,19,0,684} 
+zkMapBean:original=mapV,new=newMapVal
+14:55:42.250 [main-EventThread] INFO itwatertop.core.beans.factory.config.ZookeeperDataLoader - Parameter @zkMapBean.name value updates to newMapVal

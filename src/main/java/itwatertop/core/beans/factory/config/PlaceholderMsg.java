@@ -8,8 +8,8 @@ import java.util.regex.Pattern;
  * name配置支持String, JSON对象, JSON数组
  * */
 public class PlaceholderMsg{
-	private static final Pattern OBJECT_PATTERN = Pattern.compile("\\{(.+)\\}\\.(.+)");
-	private static final Pattern ARRAY_PATTERN = Pattern.compile("(.+)\\[(\\d+)\\]");
+	private static final Pattern OBJECT_PATTERN = Pattern.compile("\\{(.+)\\}\\.(.+)");//{mapName}.key
+	private static final Pattern ARRAY_PATTERN = Pattern.compile("(.+)\\[(\\d+)\\]");//listNmae[index] eg:list[0]
 	
 	public static final int TYPE_OBJECT = 0;
 	public static final int TYPE_ARRAY = 1;
