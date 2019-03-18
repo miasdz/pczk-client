@@ -23,3 +23,6 @@ Spring实现基于ZooKeeper参数中心系统客户端(pczk-client)
 ## 实时维护
 > 基于ZooKeeper的Watcher机制，在ZooKeeper服务端更新参数内容，通过Watcher机制通知到应用，并做相应的维护操作。详见`/src/main/java/itwatertop/core/beans/factory/config/ZookeeperDataLoader.java `以及 `/src/main/java/itwatertop/core/beans/factory/config/PczkBeanDefinitionVisitor.java`。
 其中技术实现采用了SpEL表达式用于对Bean属性的访问以及setter方法的调用，因此其属性设置受限于SpEL，不支持Set的属性设置
+
+## 回调函数
+> 支持bean实现ParamChangeCallback接口，在参数更新时调用回调函数，完成需要的连带动作，如重新建立链接等情况。参考测试案例
