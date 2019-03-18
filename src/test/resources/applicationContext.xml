@@ -15,7 +15,7 @@
 	<bean class="itwatertop.core.beans.factory.config.PczkPropertyPlaceholderConfiguer">
 		<property name="zkDataLoader">
 			<bean class="itwatertop.core.beans.factory.config.ZookeeperDataLoader" init-method="init">
-				<property name="address" value="192.168.38.101:2181"></property>
+				<property name="address" value="127.0.0.1:2181"></property>
 				<property name="authInfo" value="guojikai:miasdz"></property>
 				<property name="system" value="testSys"></property>
 				<property name="mode" value="testMode"></property>

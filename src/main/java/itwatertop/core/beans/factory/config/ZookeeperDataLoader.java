@@ -25,9 +25,12 @@ import com.alibaba.fastjson.JSON;
 import com.alibaba.fastjson.JSONArray;
 import com.alibaba.fastjson.JSONObject;
 
+import itwatertop.core.beans.factory.config.callback.ParamChangeCallback;
+
 /**
  * zookeeper参数处理<br/>
- * @since 12.09.2018
+ * @since 12.09.2018 初版
+ * @since 03.15.2019 增加回调方法
  * */
 public final class ZookeeperDataLoader extends BaseLoader implements BeanFactoryAware {
 	private Logger logger = LoggerFactory.getLogger(ZookeeperDataLoader.class);
@@ -86,6 +89,17 @@ public final class ZookeeperDataLoader extends BaseLoader implements BeanFactory
 		try {
 			// zookeeper watch回调
 			final Watcher watcher = new Watcher() {
+				public void paramChangeCallback(String spel) {
+					//获取使用该参数的bean
+					String beanName = spel.substring(0, spel.indexOf('.'));
+					Expression parseExpression = parser.parseExpression(beanName);
+					//获取bean
+					Object value = parseExpression.getValue(spelContext);
+					//判断是否实现ParamChangeCallback接口
+					if(ParamChangeCallback.class.isAssignableFrom(value.getClass())) {
+						((ParamChangeCallback)(value)).update();
+					}
+				}
 				public void process(WatchedEvent event) {
 					logger.info(event.toString());
 					try {
@@ -115,6 +129,7 @@ public final class ZookeeperDataLoader extends BaseLoader implements BeanFactory
 							Expression parseExpression = parser.parseExpression(placeholderMsg.updateSpel);
 							parseExpression.setValue(spelContext, setVal);
 							logger.info("Parameter {} value updates to {}", placeholderMsg.updateSpel, setVal);
+							paramChangeCallback(placeholderMsg.updateSpel);
 						}
 					} catch (Exception e) {
 						logger.error("node data updated failed", e);
