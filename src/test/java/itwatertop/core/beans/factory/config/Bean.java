@@ -21,10 +21,14 @@ public class Bean implements BeanNameAware, ParamChangeCallback{
 	public void setBeanName(String name) {
 		this.beanName = name;
 	}
-	
+
 	@Override
-	public void update() {
-		System.out.println(this);
-		System.out.println("参数回调函数");
+	public void beforeUpdate() {
+		System.out.println(this+"参数更新前回调");
+	}
+
+	@Override
+	public void afterUpdate() {
+		System.out.println(this+"参数更新后回调");
 	}
 }

@@ -25,7 +25,8 @@ import com.alibaba.fastjson.JSON;
 import com.alibaba.fastjson.JSONArray;
 import com.alibaba.fastjson.JSONObject;
 
-import itwatertop.core.beans.factory.config.callback.ParamChangeCallback;
+import itwatertop.core.beans.factory.config.callback.ParamChangeAfterCallback;
+import itwatertop.core.beans.factory.config.callback.ParamChangeBeforeCallback;
 
 /**
  * zookeeper参数处理<br/>
@@ -89,15 +90,21 @@ public final class ZookeeperDataLoader extends BaseLoader implements BeanFactory
 		try {
 			// zookeeper watch回调
 			final Watcher watcher = new Watcher() {
-				public void paramChangeCallback(String spel) {
+				public void paramChangeCallback(String spel, Class<?> clazz) {
 					//获取使用该参数的bean
 					String beanName = spel.substring(0, spel.indexOf('.'));
 					Expression parseExpression = parser.parseExpression(beanName);
 					//获取bean
 					Object value = parseExpression.getValue(spelContext);
 					//判断是否实现ParamChangeCallback接口
-					if(ParamChangeCallback.class.isAssignableFrom(value.getClass())) {
-						((ParamChangeCallback)(value)).update();
+					if(clazz.isAssignableFrom(value.getClass())) {
+						if(clazz.getName().equals(ParamChangeBeforeCallback.class.getName())) {
+							((ParamChangeBeforeCallback)(value)).beforeUpdate();
+							return;
+						}if(clazz.getName().equals(ParamChangeAfterCallback.class.getName())) {
+							((ParamChangeAfterCallback)(value)).afterUpdate();
+							return;
+						}
 					}
 				}
 				public void process(WatchedEvent event) {
@@ -125,11 +132,14 @@ public final class ZookeeperDataLoader extends BaseLoader implements BeanFactory
 								setVal = strNewData;
 								break;
 							}
-							// 将修改的新值更新到对应的bean属性内
+							// 参数修改前回调方法
+							paramChangeCallback(placeholderMsg.updateSpel, ParamChangeBeforeCallback.class);
+							// 更新数据
 							Expression parseExpression = parser.parseExpression(placeholderMsg.updateSpel);
 							parseExpression.setValue(spelContext, setVal);
 							logger.info("Parameter {} value updates to {}", placeholderMsg.updateSpel, setVal);
-							paramChangeCallback(placeholderMsg.updateSpel);
+							// 参数修改后回调方法
+							paramChangeCallback(placeholderMsg.updateSpel, ParamChangeAfterCallback.class);
 						}
 					} catch (Exception e) {
 						logger.error("node data updated failed", e);

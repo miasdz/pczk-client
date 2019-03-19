@@ -25,4 +25,4 @@ Spring实现基于ZooKeeper参数中心系统客户端(pczk-client)
 其中技术实现采用了SpEL表达式用于对Bean属性的访问以及setter方法的调用，因此其属性设置受限于SpEL，不支持Set的属性设置
 
 ## 回调方法
-> 支持bean实现ParamChangeCallback接口，在参数更新时调用回调方法。如重新建立网络链接等情况。参考测试案例
+> 支持bean实现ParamChangeCallback,ParamChangeBeforeCallback,ParamChangeAfterCallback接口，在参数更新时调用回调方法。如重新建立网络链接等情况。参考测试案例
